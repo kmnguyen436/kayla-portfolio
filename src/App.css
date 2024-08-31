@@ -74,32 +74,112 @@
 .side-nav li {
   margin-bottom: 10px;
 }
+.home {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+}
+#my-name {
+  color: rgb(18, 3, 3);
+}
+#background-shelf {
+  width:50vw;
+  height:50vh;
+  background:rgb(159, 116, 64);
+  z-index: -1;
+} 
+
 
 .about-me {
+  top:100vh;
   position: absolute;
-  text-align: center;
-  top: 1000px; /* Adjust according to your header height */
-  width: 150px; /* Adjust width as needed */
+  width: 100vw;
+  height: 100vh;
   padding: 10px;
 }
 .work-experience {
+  top:200vh;
   position: absolute;
-  text-align: center;
-  top: 2000px; /* Adjust according to your header height */
-  width: 150px; /* Adjust width as needed */
+  width: 100vw;
+  height: 100vh;
   padding: 10px;
 }
 .projects {
+  top:300vh;
   position: absolute;
-  text-align: center;
-  top: 3000px; /* Adjust according to your header height */
-  width: 150px; /* Adjust width as needed */
+  width: 100vw;
+  height: 100vh;
   padding: 10px;
 }
 .contacts {
+  top:400vh;
   position: absolute;
-  text-align: center;
-  top: 4000px; /* Adjust according to your header height */
-  width: 150px; /* Adjust width as needed */
+  width: 100vw;
+  height: 100vh;
   padding: 10px;
 }
+
+.drawer-shelf {
+  position: relative;
+  width: clamp(400px, 50%, 50%);;
+  height: clamp(150px, 20vh, 20vh); /* Adjust the height as needed */
+  background-color: #8B4513; /* A wood-like brown color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.shelf-content {
+  position: relative;
+  font-size: clamp(12px, 23px, 1vw);
+  padding: 10px;
+  color: #f3d9d9;
+}
+
+.drawer-shelf::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Thickness of the top edge */
+  background-color: #6B3A1E; /* Darker brown for depth */
+  box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-shelf::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Thickness of the bottom edge */
+  background-color: #6B3A1E; /* Darker brown for depth */
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Room Background Styles */
+.room-container {
+  width: 100vw;;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative;
+  overflow: hidden;
+}
+
+
+.room-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%; /* Adjust for floor height */
+  background-color: #d1c4af; /* Floor color */
+  border-top: 5px solid #b39d7e; /* Border to create the separation line */
+}
+

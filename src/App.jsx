@@ -7,17 +7,26 @@ import Navbar from './component/NavBar'
 function App() {
   const [count, setCount] = useState(0)
 
-  function handleNavClick(){
-    
+  function handleNavClick() {
+
   }
 
   return (
-    <>
-      <Navbar/>
+    <> <Navbar />
       <main className='px-3 max-w-7xl mx-auto flex flex-col gap-9 w-full pb-10 pt-4'>
+      <div className="room-container">
         <section className='home'>
-          <h1 className='my-name'>Kayla Nguyen</h1>
-        </section>
+          <div className="drawer-shelf">
+            {/* Add content or leave it empty to just show the shelf */}
+            <div className="shelf-content">
+              <h1>Kayla Nguyen</h1>
+              <p>Software Engineer | Data Engineer | Frontend Developer</p>
+            </div>
+          </div>
+          <div className="drawer-shelf" />
+          <div className="drawer-shelf" />
+          <div className="drawer-shelf" />
+        </section></div>
         <section className='about-me'>
           <h1>About Me</h1>
         </section>
