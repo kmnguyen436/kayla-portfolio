@@ -1,8 +1,10 @@
-# React + Vite
+# Kayla's portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and Vite portfolio designed as a little house. The rooms and the navigation links lead to the corresponding sections of the page.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Use Node.js 20 (20.19.0 or newer) or Node.js 22.12.0 or newer (an LTS release is recommended). Run `npm install` and then `npm run dev`. Use `npm run lint` and `npm run build` to check changes.
+
+The page layout is assembled in `src/App.jsx`. Its sections, house tour, navigation, and footer each have components and styles in `src/components`. Shared page styles live in `src/App.css`. 
+

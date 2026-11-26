@@ -1,0 +1,6 @@
+.experience-entry { margin-bottom: 27px; padding-bottom: 22px; border-bottom: 1px solid #e6e3d8; }
+.experience-date { margin-bottom: 6px; color: #885642; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.experience-entry h3, .education h3 { margin-bottom: 8px; color: #393d32; font-size: 22px; line-height: 1.3; }
+.experience-entry h3 span { color: #805c4d; }
+.experience-entry p:last-child, .education p:last-child { margin-bottom: 0; }
+.education { margin-bottom: 20px; }

@@ -1,0 +1,10 @@
+.contact-section { position: relative; overflow: hidden; margin: 0 7% 70px; padding: 75px 30px; background: #dce5d6; text-align: center; scroll-margin-top: 25px; }
+.contact-section .eyebrow { color: #526a54; }
+.contact-section > p:not(.eyebrow) { margin: 18px 0 10px; color: #526453; font-size: 14px; }
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.contact-flower { position: absolute; right: 5%; bottom: -34px; color: #c6d6c1; font-size: 140px; line-height: 1; pointer-events: none; }
+.button-light { position: relative; z-index: 1; }
+
+@media (max-width: 550px) {
+  .contact-section { padding: 65px 24px; }
+}

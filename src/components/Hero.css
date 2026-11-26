@@ -1,0 +1,13 @@
+.hero { min-height: 665px; padding: 72px 7% 76px; display: grid; grid-template-columns: minmax(250px, .8fr) minmax(400px, 1.2fr); align-items: center; gap: 6%; }
+.sparkle { font-size: 16px; margin-right: 6px; }
+.hero-description { max-width: 355px; color: #62655a; font-size: 15px; line-height: 1.9; }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 65px; color: #696c60; font-size: 12px; }
+.hero-note span { color: #bd8a74; font-size: 21px; }
+
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding: 65px 6%; gap: 48px; }
+  .hero-note { margin-top: 28px; }
+}
+@media (max-width: 550px) {
+  .hero { padding-top: 50px; }
+}

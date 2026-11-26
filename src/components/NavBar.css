@@ -1,0 +1,19 @@
+.site-header { height: 92px; padding: 0 7%; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid #e8e4d8; }
+.wordmark { font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; letter-spacing: -.06em; white-space: nowrap; }
+.wordmark-icon { color: #bc806b; display: inline-block; font: 24px sans-serif; margin-right: 7px; }
+.wordmark-dot { color: #bc806b; }
+.main-nav { display: flex; align-items: center; gap: 36px; font-size: 12px; font-weight: 700; color: #64665b; }
+.main-nav a:hover { color: #844b39; }
+.main-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.header-link { border: 1px solid #aeb39d; border-radius: 30px; padding: 11px 20px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.header-link span { margin-left: 9px; }
+.header-link:hover { background: #e9eee2; }
+
+@media (max-width: 800px) {
+  .site-header { height: auto; min-height: 78px; padding: 20px 6%; flex-wrap: wrap; }
+  .main-nav { order: 3; width: 100%; justify-content: space-between; gap: 10px; padding-top: 4px; }
+}
+@media (max-width: 550px) {
+  .main-nav { font-size: 11px; }
+  .header-link { padding: 9px 14px; }
+}
