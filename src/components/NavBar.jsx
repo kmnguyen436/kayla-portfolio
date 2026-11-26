@@ -12,7 +12,7 @@ export default function NavBar() {
     <header className="site-header">
       <a className="wordmark" href="#home" aria-label="Kayla Nguyen, home">
         <span className="wordmark-icon" aria-hidden="true">✳</span>
-        kayla's place<span className="wordmark-dot">.</span>
+        kayla's githome<span className="wordmark-dot">.</span>
       </a>
       <nav className="main-nav" aria-label="Main navigation">
         {links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}

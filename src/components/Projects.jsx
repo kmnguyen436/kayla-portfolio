@@ -9,16 +9,15 @@ const projects = [
 ]
 
 function getGameUrl() {
-  const value = import.meta.env.VITE_MEZCAL_GAME_URL
-  if (!value) return { url: null, error: false }
+  const value = import.meta.env.VITE_MEZCAL_GAME_URL || 'https://kmnguyen436.github.io/mezcal-runner-game/'
   try {
     const url = new URL(value)
     const localDev = import.meta.env.DEV && url.protocol === 'http:' && ['localhost', '127.0.0.1'].includes(url.hostname)
-    if (!url.username && !url.password && (url.protocol === 'https:' || localDev)) return { url: url.href, error: false }
+    if (!url.username && !url.password && (url.protocol === 'https:' || localDev)) return url.href
   } catch {
-    return { url: null, error: true }
+    return null
   }
-  return { url: null, error: true }
+  return null
 }
 
 const game = getGameUrl()
@@ -48,15 +47,15 @@ export default function Projects() {
           </div>
           {activeIndex === 0 ? (
             <div className="game-embed">
-              {game.url ? (
+              {game ? (
                 <>
-                  <iframe title="Play Mezcal Runner" src={game.url} sandbox="allow-scripts" referrerPolicy="no-referrer" loading="lazy" />
-                  <p className="game-embed-note">Changing projects resets the game. <a href={game.url} target="_blank" rel="noreferrer">Open the game in a new tab <FiExternalLink aria-hidden="true" /></a></p>
+                  <iframe title="Play Mezcal Runner" src={game} sandbox="allow-scripts" referrerPolicy="no-referrer" loading="lazy" />
+                  <p className="game-embed-note">Changing projects resets the game. <a href={game} target="_blank" rel="noreferrer">Open the game in a new tab <FiExternalLink aria-hidden="true" /></a></p>
                 </>
               ) : (
                 <div className="game-unavailable">
                   <span aria-hidden="true">✿</span>
-                  <p>{game.error ? 'The game link is not valid. Please configure an HTTPS game URL.' : 'Mezcal’s game will be ready to play here once it’s deployed.'}</p>
+                  <p>The game link is not valid. Please configure an HTTPS game URL.</p>
                 </div>
               )}
             </div>
