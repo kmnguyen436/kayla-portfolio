@@ -3,7 +3,7 @@ import { FiArrowLeft, FiArrowRight, FiExternalLink, FiGithub } from 'react-icons
 import './Projects.css'
 
 const projects = [
-  { title: 'Mezcal Runner', label: 'A LITTLE ADVENTURE', description: 'A little running game starring my favorite adventure buddy. Help Mezcal collect treats and avoid obstacles!' },
+  { title: 'Mezcal Runner', label: 'A LITTLE ADVENTURE', description: 'A little running game starring my favorite adventure buddy. Help Mezcal collect treats and avoid obstacles!', process: 'I guided the design and accessibility direction and deployed the game using GitHub Actions and GitHub Pages, with AI assistance for implementation and refinement.' },
   { title: 'Something new is growing.', label: 'COMING SOON', description: 'A cozy spot saved for the next project on my workbench.' },
   { title: 'More to come.', label: 'COMING SOON', description: 'Another little idea will find its home here soon.' },
 ]
@@ -43,6 +43,7 @@ export default function Projects() {
             <p className="eyebrow">{project.label}</p>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            {project.process && <p>{project.process}</p>}
             <p className="project-count" aria-live="polite" aria-atomic="true">PROJECT {activeIndex + 1} OF {projects.length}: {project.title}</p>
           </div>
           {activeIndex === 0 ? (
