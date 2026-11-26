@@ -15,7 +15,7 @@ export default function About() {
         <div className="tags"><span>SOFTWARE</span><span>DATA</span><span>FRONTEND</span></div>
         <div className="mezcal-card">
           <img src={mezcal_smiling} alt="Mezcal smiling" width={150} />
-          <div><p className="eyebrow">A LITTLE HOUSEMATE</p><h3>Meet Mezcal</h3><p>My favorite companion loves to show everyone his happy smiles.</p></div>
+          <div><p className="eyebrow">A LITTLE HOUSEMATE</p><h3>Meet Mezcal</h3><p>My favorite companion loves to show everyone some love, so be sure to play with him a bit down below!</p></div>
         </div>
       </div>
     </section>
